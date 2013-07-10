@@ -29,6 +29,11 @@
 		63438000178D3C34001DBA19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63437FCD178D3C34001DBA19 /* Foundation.framework */; };
 		63438008178D3C34001DBA19 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63438006178D3C34001DBA19 /* InfoPlist.strings */; };
 		6343800B178D3C34001DBA19 /* tabbarTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6343800A178D3C34001DBA19 /* tabbarTestTests.m */; };
+		63438064178D3E63001DBA19 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63438062178D3E63001DBA19 /* MyTableViewController.m */; };
+		63438065178D3E63001DBA19 /* MyTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63438063178D3E63001DBA19 /* MyTableViewController.xib */; };
+		63438069178D3FB5001DBA19 /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63438068178D3FB5001DBA19 /* MyCustomCell.xib */; };
+		6343806D178D43B0001DBA19 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6343806B178D43B0001DBA19 /* DetailViewController.m */; };
+		6343806E178D43B0001DBA19 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6343806C178D43B0001DBA19 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,13 @@
 		63438007178D3C34001DBA19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		63438009178D3C34001DBA19 /* tabbarTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tabbarTestTests.h; sourceTree = "<group>"; };
 		6343800A178D3C34001DBA19 /* tabbarTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tabbarTestTests.m; sourceTree = "<group>"; };
+		63438061178D3E63001DBA19 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		63438062178D3E63001DBA19 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		63438063178D3E63001DBA19 /* MyTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewController.xib; sourceTree = "<group>"; };
+		63438068178D3FB5001DBA19 /* MyCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
+		6343806A178D43B0001DBA19 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		6343806B178D43B0001DBA19 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		6343806C178D43B0001DBA19 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,18 +142,10 @@
 		63437FD1178D3C34001DBA19 /* tabbarTest */ = {
 			isa = PBXGroup;
 			children = (
+				63438067178D3E81001DBA19 /* viewcontroller */,
+				63438066178D3E72001DBA19 /* resource */,
 				63437FDA178D3C34001DBA19 /* AppDelegate.h */,
 				63437FDB178D3C34001DBA19 /* AppDelegate.m */,
-				63437FE3178D3C34001DBA19 /* FirstViewController.h */,
-				63437FE4178D3C34001DBA19 /* FirstViewController.m */,
-				63437FE6178D3C34001DBA19 /* first.png */,
-				63437FE8178D3C34001DBA19 /* first@2x.png */,
-				63437FEA178D3C34001DBA19 /* SecondViewController.h */,
-				63437FEB178D3C34001DBA19 /* SecondViewController.m */,
-				63437FED178D3C34001DBA19 /* second.png */,
-				63437FEF178D3C34001DBA19 /* second@2x.png */,
-				63437FF1178D3C34001DBA19 /* FirstViewController.xib */,
-				63437FF4178D3C34001DBA19 /* SecondViewController.xib */,
 				63437FD2178D3C34001DBA19 /* Supporting Files */,
 			);
 			path = tabbarTest;
@@ -178,6 +182,37 @@
 				63438006178D3C34001DBA19 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63438066178D3E72001DBA19 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				63437FE6178D3C34001DBA19 /* first.png */,
+				63437FE8178D3C34001DBA19 /* first@2x.png */,
+				63437FED178D3C34001DBA19 /* second.png */,
+				63437FEF178D3C34001DBA19 /* second@2x.png */,
+			);
+			name = resource;
+			sourceTree = "<group>";
+		};
+		63438067178D3E81001DBA19 /* viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				63437FE3178D3C34001DBA19 /* FirstViewController.h */,
+				63437FE4178D3C34001DBA19 /* FirstViewController.m */,
+				63437FF1178D3C34001DBA19 /* FirstViewController.xib */,
+				63437FEA178D3C34001DBA19 /* SecondViewController.h */,
+				63437FEB178D3C34001DBA19 /* SecondViewController.m */,
+				63437FF4178D3C34001DBA19 /* SecondViewController.xib */,
+				63438061178D3E63001DBA19 /* MyTableViewController.h */,
+				63438062178D3E63001DBA19 /* MyTableViewController.m */,
+				63438063178D3E63001DBA19 /* MyTableViewController.xib */,
+				63438068178D3FB5001DBA19 /* MyCustomCell.xib */,
+				6343806A178D43B0001DBA19 /* DetailViewController.h */,
+				6343806B178D43B0001DBA19 /* DetailViewController.m */,
+				6343806C178D43B0001DBA19 /* DetailViewController.xib */,
+			);
+			name = viewcontroller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +296,9 @@
 				63437FF0178D3C34001DBA19 /* second@2x.png in Resources */,
 				63437FF3178D3C34001DBA19 /* FirstViewController.xib in Resources */,
 				63437FF6178D3C34001DBA19 /* SecondViewController.xib in Resources */,
+				63438065178D3E63001DBA19 /* MyTableViewController.xib in Resources */,
+				63438069178D3FB5001DBA19 /* MyCustomCell.xib in Resources */,
+				6343806E178D43B0001DBA19 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +337,8 @@
 				63437FDC178D3C34001DBA19 /* AppDelegate.m in Sources */,
 				63437FE5178D3C34001DBA19 /* FirstViewController.m in Sources */,
 				63437FEC178D3C34001DBA19 /* SecondViewController.m in Sources */,
+				63438064178D3E63001DBA19 /* MyTableViewController.m in Sources */,
+				6343806D178D43B0001DBA19 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
