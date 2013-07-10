@@ -20,6 +20,13 @@
     if (self) {
         self.title = NSLocalizedString(@"First", @"First");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc]
+                                                 initWithTarget:self action:@selector(swipe:)];
+        [swipeRecognizer setNumberOfTouchesRequired:1];
+        [swipeRecognizer setDelegate:self];
+        //Don't forget to set the userInteractionEnabled to YES, by default It's NO.
+        self.view.userInteractionEnabled = YES;
+        [self.view addGestureRecognizer:swipeRecognizer];
     }
     return self;
 }
@@ -34,6 +41,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) swipe:(id) sender
+{
+    NSLog(@"swipe!!");
 }
 
 @end
