@@ -28,12 +28,31 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self.searchBar becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    //[self.view becomeFirstResponder];
+    [searchBar resignFirstResponder];
+    for (int i = 0; i < 4; i++) {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [button setFrame:CGRectMake((i+1)*50, (i+1)*50, 50, 50)];
+        [button setTag:i];
+        [button setTitle:[NSString stringWithFormat:@"%d 버튼",i] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:button];
+    }
+}
+
+-(IBAction)buttonClicked:(id)sender {
+    UIButton *input = (UIButton *)sender;
+    NSLog(@"%d clicked",input.tag);
 }
 
 @end
